@@ -1,12 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>P-Ticket</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="styles/style.css" />
+    <!-- daisy ui and tailwind css link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- tailwind color customization -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1DD100",
+              primary2: "#1DD1001A",
+              headprimary: "#030712",
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body>
-    <header></header>
+  <body class="font-inter">
+    <header class="container mx-auto lg:px-24 lg:pt-8 px-5 pt-4">
+      <!-- navbar starts here -->
+      <nav>
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <a class="text-2xl lg:text-4xl font-extrabold text-headprimary"
+              >P-Ticket</a
+            >
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu flex gap-10 menu-horizontal px-1 font-raleway">
+              <li>
+                <a
+                  class="text-lg text-[#030712B3] hover:bg-primary2 hover:text-[#1DD100]"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-lg text-[#030712B3] hover:bg-primary2 hover:text-[#1DD100]"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-lg text-[#030712B3] hover:bg-primary2 hover:text-[#1DD100]"
+                  >Destination</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-lg text-[#030712B3] hover:bg-primary2 hover:text-[#1DD100]"
+                  >Search</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <btn
+              class="btn text-[#1DD100] bg-primary2 border border-[#1DD10042] hover:bg-white"
+              >Bus <img src="./images/bus-icon.png" alt=""
+            /></btn>
+          </div>
+        </div>
+      </nav>
+
+      <!-- banner starts here -->
+      <div
+        class="bg-[url(./images/banner.png)] bg-cover h-[500px] rounded-[32px] flex justify-center items-center pt-4 lg:pt-6"
+      >
+        <div class="p-5 lg:px-24 lg:py-12 text-center space-y-7">
+          <h1
+            class="text-white text-3xl lg:text-6xl font-extrabold font-raleway"
+          >
+            End-to-End Travel with <br />
+            <span class="text-primary">P Paribahan</span>
+          </h1>
+          <p class="text-white text-center">
+            Yes, you can run unit tests and view the results directly within the
+            app. The integrated testing features allow for a streamlined .
+          </p>
+          <button
+            class="btn bg-primary border-2 border-primary hover:border-primary hover:bg-primary2 hover:text-white"
+          >
+            Buy Tickets
+          </button>
+        </div>
+      </div>
+    </header>
 
     <main></main>
 
