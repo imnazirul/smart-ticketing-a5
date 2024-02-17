@@ -22,6 +22,7 @@
             colors: {
               primary: "#1DD100",
               primary2: "#1DD1001A",
+              primary3: "#03071299",
               headprimary: "#030712",
             },
           },
@@ -30,7 +31,7 @@
     </script>
   </head>
   <body class="font-inter">
-    <header class="container mx-auto lg:px-24 lg:pt-8 px-5 pt-4">
+    <header class="container mx-auto lg:px-24 lg:pt-8 px-5 pt-4 mb-10">
       <!-- navbar starts here -->
       <nav>
         <div class="navbar bg-base-100">
@@ -43,25 +44,25 @@
             <ul class="menu flex gap-10 menu-horizontal px-1 font-raleway">
               <li>
                 <a
-                  class="text-lg text-[#030712B3] hover:bg-primary2 hover:text-[#1DD100]"
+                  class="text-lg text-[#030712B3] hover:bg-primary2 hover:text-primary"
                   >Home</a
                 >
               </li>
               <li>
                 <a
-                  class="text-lg text-[#030712B3] hover:bg-primary2 hover:text-[#1DD100]"
+                  class="text-lg text-[#030712B3] hover:bg-primary2 hover:text-primary"
                   >About</a
                 >
               </li>
               <li>
                 <a
-                  class="text-lg text-[#030712B3] hover:bg-primary2 hover:text-[#1DD100]"
+                  class="text-lg text-[#030712B3] hover:bg-primary2 hover:text-primary"
                   >Destination</a
                 >
               </li>
               <li>
                 <a
-                  class="text-lg text-[#030712B3] hover:bg-primary2 hover:text-[#1DD100]"
+                  class="text-lg text-[#030712B3] hover:bg-primary2 hover:text-primary"
                   >Search</a
                 >
               </li>
@@ -98,9 +99,106 @@
           </button>
         </div>
       </div>
+
+      <!-- floating div -->
+      <div
+        class="hidden lg:flex gap-5 justify-center items-center -translate-y-16"
+      >
+        <!-- one -->
+        <div
+          class="flex gap-3 p-7 border-t-0 border-x-0 border-b-primary border-[3px] rounded-3xl bg-white"
+        >
+          <img src="./images/people.png" alt="" />
+          <div>
+            <h3 class="text-headprimary font-bold text-3xl">500K+</h3>
+            <p class="text-lg text-primary3">Registered users</p>
+          </div>
+        </div>
+
+        <!-- two -->
+        <div
+          class="flex gap-3 p-7 border-t-0 border-x-0 border-b-primary border-[3px] rounded-3xl bg-white"
+        >
+          <img src="./images/ticket-cupon.png" alt="" />
+          <div>
+            <h3 class="text-headprimary font-bold text-3xl">1.7 lacks</h3>
+            <p class="text-lg text-primary3">Tickets sold</p>
+          </div>
+        </div>
+
+        <!-- three -->
+        <div
+          class="flex gap-3 p-7 border-t-0 border-x-0 border-b-primary border-[3px] rounded-3xl bg-white"
+        >
+          <img src="./images/stoppage.png" alt="" />
+          <div>
+            <h3 class="text-headprimary font-bold text-3xl">80K+</h3>
+            <p class="text-lg text-primary3">Rental partners</p>
+          </div>
+        </div>
+      </div>
     </header>
 
-    <main></main>
+    <main class="container mx-auto lg:px-24 lg:pt-8 px-5">
+      <!-- best offer for you section -->
+      <section class="mb-10 lg:mb-20">
+        <h1 class="text-headprimary text-4xl font-bold text-center mb-10">
+          Best offers for you
+        </h1>
+
+        <div class="flex flex-col lg:flex-row justify-between gap-10">
+          <!-- one -->
+          <div
+            class="bg-[#FFBF0F] rounded-3xl flex justify-between items-center gap-5 lg:w-1/2"
+          >
+            <div class="pl-4 lg:py-12 lg:pl-8">
+              <h3 class="text-black text-2xl lg:text-4xl font-bold">15% OFF</h3>
+              <p class="lg:text-lg text-headprimary">on your next purchase</p>
+              <p class="text-primary3">use by January 2024</p>
+            </div>
+            <div class="h-full">
+              <img class="h-full" src="./images/cupon-devider.png" alt="" />
+            </div>
+            <div class="pr-4 lg:py-12 lg:pr-8">
+              <h3
+                class="text-black text-2xl lg:text-4xl font-bold font-raleway"
+              >
+                NEW15
+              </h3>
+              <p>Coupon Code</p>
+            </div>
+          </div>
+
+          <!-- two -->
+          <div
+            class="bg-[#F78C9C] rounded-3xl flex justify-between items-center gap-5 lg:w-1/2"
+          >
+            <div class="pl-4 lg:py-12 lg:pl-8">
+              <h3 class="text-black text-2xl lg:text-4xl font-bold">20% OFF</h3>
+              <p class="lg:text-lg text-headprimary">on your next purchase</p>
+              <p class="text-primary3">use by January 2024</p>
+            </div>
+            <div class="h-full">
+              <img class="h-full" src="./images/cupon-devider.png" alt="" />
+            </div>
+            <div class="pr-4 lg:py-12 lg:pr-8">
+              <h3
+                class="text-black text-2xl lg:text-4xl font-bold font-raleway"
+              >
+                Couple 20
+              </h3>
+              <p>Coupon Code</p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-10 mx-auto text-center">
+          <btn
+            class="btn text-primary border border-primary bg-white hover:border-primary hover:bg-white text-lg"
+            >See All Offers</btn
+          >
+        </div>
+      </section>
+    </main>
 
     <footer></footer>
   </body>
