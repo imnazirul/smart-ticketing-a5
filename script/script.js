@@ -1,6 +1,7 @@
 const allSeatBtnList = document.querySelectorAll(".seat-btn");
 const couponBtn = document.getElementById("coupon-btn");
 const seatError = document.getElementById("seat-error");
+const nextBtn = document.getElementById("next-btn");
 
 for (let i = 0; i < allSeatBtnList.length; i++) {
   allSeatBtnList[i].addEventListener("click", function (event) {
@@ -13,6 +14,7 @@ const seatNameArray = [];
 
 function handleSeatClick(event) {
   let seatBtn = event.target;
+  nextError.innerText = "";
   const seatName = seatBtn.innerText;
   selectedSeatsNumber++;
   if (selectedSeatsNumber <= 4 && seatNameArray.indexOf(seatName) == -1) {
@@ -109,3 +111,30 @@ couponBtn.addEventListener("click", function () {
     seatError.innerText = "Please Add At Least One Seat!  ";
   }
 });
+
+nextBtn.addEventListener("click", function (event) {
+  event.preventDefault();
+  const nextError = document.getElementById("nextError");
+  if (selectedSeatsNumber > 0) {
+    nextError.innerText = "";
+    handleNext();
+  } else {
+    nextError.innerText = "Please Select At Least One Seat First";
+  }
+});
+
+function handleNext() {
+  const phoneNumber = Number(document.getElementById("phone").value);
+  const phoneError = document.getElementById("phoneError");
+  console.log(phoneNumber);
+  if (
+    phoneNumber !== 0 &&
+    typeof phoneNumber === "number" &&
+    !isNaN(phoneNumber)
+  ) {
+    my_modal_1.showModal();
+    phoneError.innerText = "";
+  } else {
+    phoneError.innerText = "Please Enter a Valid Phone Number";
+  }
+}
