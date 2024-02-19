@@ -16,8 +16,9 @@ function handleSeatClick(event) {
   let seatBtn = event.target;
   nextError.innerText = "";
   const seatName = seatBtn.innerText;
-  selectedSeatsNumber++;
-  if (selectedSeatsNumber <= 4 && seatNameArray.indexOf(seatName) == -1) {
+
+  if (selectedSeatsNumber < 4 && seatNameArray.indexOf(seatName) == -1) {
+    selectedSeatsNumber++;
     seatError.innerText = "";
     document.getElementById("coupon-input-error").innerText = "";
     const numberOfSelectedSeats = document.getElementById(
@@ -108,7 +109,7 @@ couponBtn.addEventListener("click", function () {
         "Invalid Coupon Code";
     }
   } else {
-    seatError.innerText = "Please Add At Least One Seat!  ";
+    seatError.innerText = "Please Select At Least One Seat!  ";
   }
 });
 
@@ -119,7 +120,7 @@ nextBtn.addEventListener("click", function (event) {
     nextError.innerText = "";
     handleNext();
   } else {
-    nextError.innerText = "Please Select At Least One Seat First";
+    nextError.innerText = "Please Select At Least One Seat First!";
   }
 });
 
