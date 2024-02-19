@@ -2,6 +2,7 @@ const allSeatBtnList = document.querySelectorAll(".seat-btn");
 const couponBtn = document.getElementById("coupon-btn");
 const seatError = document.getElementById("seat-error");
 const nextBtn = document.getElementById("next-btn");
+const continueBtn = document.getElementById("continue-btn");
 
 for (let i = 0; i < allSeatBtnList.length; i++) {
   allSeatBtnList[i].addEventListener("click", function (event) {
@@ -139,3 +140,7 @@ function handleNext() {
     phoneError.innerText = "Please Enter a Valid Phone Number";
   }
 }
+
+continueBtn.addEventListener("click", function (event) {
+  window.location.reload();
+});
