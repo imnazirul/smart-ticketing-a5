@@ -528,7 +528,7 @@
               <!-- counting -->
               <div class="bg-[#F7F8F8] px-7 py-5 mt-4 rounded-xl">
                 <div
-                  class="flex justify-around border-b-[#03071233] border-b-2 border-dashed pb-4 mb-5"
+                  class="flex justify-between border-b-[#03071233] border-b-2 border-dashed mb-5"
                 >
                   <h3 class="text-[#030712] text-lg font-semibold">
                     Seat
@@ -562,38 +562,61 @@
                 <!-- total -->
 
                 <div
-                  class="flex justify-between border-t-[#03071233] border-t-2 border-dashed px-3 lg:px-12 pt-2"
+                  class="flex justify-between border-t-[#03071233] border-t-2 pt-2"
                 >
                   <h3 class="text-[#030712] text-lg font-semibold">
                     Total Price
                   </h3>
-
+                  <p></p>
                   <h3 class="text-[#030712] text-lg font-semibold">
                     BDT <span id="total-price">00</span>
                   </h3>
                 </div>
+
+                <!-- discounted Price -->
+                <div class="flex justify-between">
+                  <h3
+                    id="discountedText"
+                    class="text-[#030712] text-lg font-semibold"
+                  ></h3>
+                  <p></p>
+                  <h3
+                    id="discountedPrice"
+                    class="text-[#030712] text-lg font-semibold"
+                  ></h3>
+                </div>
                 <!-- Coupon -->
+                <p id="seat-error" class="text-[#EE4B2B] font-medium"></p>
                 <div
+                  id="coupon-div"
                   class="w-full mt-5 h-14 bg-white flex justify-between rounded-xl overflow-hidden p-2 items-center"
                 >
                   <input
+                    id="coupon-input"
                     class="h-full w-full p-3 outline-none font-semibold placeholder:font-normal"
                     type="text"
                     placeholder="Have any coupon?"
                   />
                   <button
+                    id="coupon-btn"
                     class="bg-btnPrimary btn rounded-xl font-semibold text-white"
                   >
                     Apply
                   </button>
                 </div>
-
+                <p
+                  id="coupon-input-error"
+                  class="text-[#EE4B2B] font-medium"
+                ></p>
                 <!-- grand total -->
 
-                <div class="flex justify-between px-3 lg:px-11 mt-5">
+                <div
+                  class="flex justify-between mt-5 border-t-[#03071233] border-t-2"
+                >
                   <h3 class="text-[#030712] text-lg font-semibold">
                     Grand Total
                   </h3>
+                  <p></p>
 
                   <h3 class="text-[#030712] text-lg font-semibold">
                     BDT <span id="grand-total">00</span>
@@ -644,6 +667,7 @@
                   />
                 </div>
                 <input
+                  id="next-btn"
                   class="btn w-full bg-btnPrimary border-2 border-btnPrimary hover:border-btnPrimary hover:bg-[#1DD1004D] hover:text-black text-white text-xl hover:border-2"
                   type="submit"
                   value="Next"
